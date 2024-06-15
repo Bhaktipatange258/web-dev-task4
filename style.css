@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+
+body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'robot', sans-serif;
+}
+
+/* NavBar */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 8 2.5vm;
+}
+
+    .toggle-btn{
+     width: 20px;
+     height: 18px;
+     position: relative;
+     left: 15px;
+     cursor: pointer;
+    }
+
+    .toggle-btn span{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #979797;
+    }
+    .toggle-btn span:nth-child(1){
+        top: 0;
+    }
+    .toggle-btn span:nth-child(3){
+        top: 100%;
+    }
+
+    .logo{
+        height: 30px;
+        margin: -5px 40px 0;
+    }
+
+    .search-box{
+        position: relative;
+        left: 150px;
+        max-width: 500px;
+        width: 50%;
+        height: 40px;
+        display: flex;
+    }
+    .search-bar{
+        width: 85%;
+        height: 100%;
+        border: 2px solid #dbdbdb;
+        border-radius: 40px 0px 0px 40px;
+        padding: 0 20px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    .search-btn{
+        width: 15%;
+        height: 100%;
+        background: #f0f0f0;
+        border: 2px solid #dbdbdb;
+        border-radius: 0px 40px 40px 0px;
+        padding: 5px 0;
+        border-left: none;
+    }
+    .search-btn img{
+        height: 100%;
+    }
+
+    .user-options{
+        height: 35px;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+    .user-options .icon{
+        height: 80%;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .user-dp{
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .user-dp img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* SideBar */
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px; 
+    height: calc(100vh - 60px);
+    background: #fff;
+    padding-right: 10px;
+}
+
+    .links{
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        color: #242424;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .links img{
+        height: 25px;
+        margin-right: 20px;
+    }
+    .links i{
+        height: 25px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .links:hover,
+    .links.active{
+        background: rgba(0, 0, 0,0.1);
+    }
+
+    .seprator{
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+    }
+
+/* filters */
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+    width: calc(100% -250px);
+    height: 68px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+    .filters::-webkit-scrollbar{
+        display: none;
+    }
+
+    .filter-options{
+        flex: 0 0 auto;
+        padding: 10px 20px;
+        border-radius: 50px;
+        background: #f0f0f0;
+        border: 1px solid #dbdbdb;
+        text-transform: capitalize;
+        margin-right: 10px;
+        color: #242424;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .filter-options.active{
+        color: #fff;
+        background: #242424;
+    }
+/* Video */
+.video-container{
+    width: calc(100% -250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-gap:20px 5px;
+    overflow-x: hidden;
+    /* background: #000; */
+}
+    .video{
+        min-height: 250px;
+        height: auto;
+    }
+    .thumbnails{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .containt{
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title{
+        width: 100%;
+        height: 48px;
+        overflow: hidden;
+    }
+    .name{
+        font-size: 14px;
+        margin: 2px 0;
+        color: #979797;
+    }
